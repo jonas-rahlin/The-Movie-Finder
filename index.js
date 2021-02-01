@@ -20,7 +20,7 @@ const getMovies = async () => {
     const searchInput = document.getElementById("search-input").value;
     const apiCall = `http://www.omdbapi.com/?apikey=9c1e556d&s=${searchInput}`;
     const res = await fetch(apiCall);
-    const data = await res.json();
+    const data = res.json();
     console.log(data.Search);
     movies = data.Search;
 }
